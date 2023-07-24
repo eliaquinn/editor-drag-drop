@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" href="gridstack/gridstack.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="editor">
+        <div class="tools">
+            <ul>
+                <li>
+                    <button>
+                        <i class='bx bxs-objects-horizontal-left'></i>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class='bx bxs-objects-vertical-bottom'></i>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <i class='bx bxs-color'></i>
+                    </button>
+                </li>
+                <li>
+                    <button><i class='bx bxs-home-alt-2'></i></button>
+                </li>
+                <li>
+                    <button>
+                        <i class='bx bxs-circle-three-quarter'></i>
+                    </button>
+                </li>
+                <li class="btn-trash" data-teste="olá sdfads">
+                    <i class='bx bx-trash' id="trash"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="doc">
+            <div class="page">
+                <header id="header-grid"></header>
+                <main>
+                    corpo
+                </main>
+                <footer class="grid-stack" id="footer-grid"></footer>
+            </div>
+        </div>
+        <div class="properties">
+            <ul>
+                <li>
+                    <div class="content">
+                        <h3>Propriedades</h3>
+                        <table>
+                            <thead>
+                                <th>teste</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>outros</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="gridstack/gridstack-all.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
