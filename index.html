@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="gridstack/gridstack.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gridstack-layout.css">
 </head>
 
 <body>
@@ -15,13 +16,18 @@
         <div class="tools">
             <ul>
                 <li>
-                    <button>
-                        <i class='bx bxs-objects-horizontal-left'></i>
-                    </button>
+                    <!-- <button>
+                        <i class='bx bx-image-alt newImage'></i>
+                    </button> -->
+                    <div class="grid-stack-item newImage">
+                        <div class="grid-stack-item-content">
+                            <span>Drag me</span>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <button>
-                        <i class='bx bxs-objects-vertical-bottom'></i>
+                        <i class='bx bx-text'></i>
                     </button>
                 </li>
                 <li>
@@ -45,9 +51,7 @@
         <div class="doc">
             <div class="page">
                 <header id="header-grid"></header>
-                <main>
-                    corpo
-                </main>
+                <main id="body-grid"></main>
                 <footer class="grid-stack" id="footer-grid"></footer>
             </div>
         </div>
@@ -73,6 +77,7 @@
     </div>
 
     <script src="gridstack/gridstack-all.js"></script>
+    <script src="js/engine.js"></script>
     <script src="js/main.js"></script>
 </body>
 

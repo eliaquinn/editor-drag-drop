@@ -57,15 +57,15 @@ body {
 }
 
 .tools ul li button:hover {
-    background: #f0ecec;
+    background: #d4d1d19c;
 }
 
 .tools ul li i {
+    cursor: grab;
     padding-top: 8px;
     display: block;
     height: 50px;
     text-align: center;
-    cursor: pointer;
     font-size: xx-large;
     color: #686868;
 }
@@ -129,7 +129,7 @@ body {
 
 .page main {
     margin-top: 20px;
-    background: rgb(235, 221, 221);
+    /* background: rgb(235, 221, 221); */
 }
 
 .page footer {
@@ -186,48 +186,4 @@ body {
 
 .content-sp span {
     text-align: center;
-}
-
-.grid-stack-item-removing {
-    opacity: 0.2;
-}
-
-.grid-stack-item-content {
-    cursor: grab;
-    border-radius: 3px;
-    transition: .2s;
-    border: 1px solid transparent;
-}
-
-.grid-stack-item-content:hover {
-    background-color: #eae9f1;
-    border: 1px solid #e0d8d8;
-}
-
-.gs-4>.grid-stack-item[gs-x="1"] {
-    left: 25%
-}
-
-.gs-4>.grid-stack-item[gs-x="2"] {
-    left: 50%
-}
-
-.gs-4>.grid-stack-item[gs-x="3"] {
-    left: 75%
-}
-
-.gs-4>.grid-stack-item {
-    width: 25%
-}
-
-.gs-4>.grid-stack-item[gs-w="2"] {
-    width: 50%
-}
-
-.gs-4>.grid-stack-item[gs-w="3"] {
-    width: 75%
-}
-
-.gs-4>.grid-stack-item[gs-w="1"] {
-    width: 100%
 }
