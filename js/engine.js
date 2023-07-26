@@ -1,4 +1,4 @@
-class GridStackBuilder {
+class GridStackBuilder extends GridStackEngine {
     constructor(arr) {
         this.object = arr
     }
@@ -14,5 +14,11 @@ class GridStackBuilder {
             removable,
         }, element)
         .load(arr)
+    }
+
+    moveNode(GridStackNode, GridStackMoveOpts) {
+        o.x = node.x;
+        o.w = node.w;
+        return super.moveNode(node, o);
     }
 }

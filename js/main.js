@@ -1,204 +1,67 @@
-const header = [
-    {
-        x: 0, 
-        y: 0, 
-        w: 1, 
-        h: 1,
-        noResize: true, 
-        content: '<div class="elem-img"><img src="assets/logo.png" alt="" /></div>'
-    },
-    {
-        x: 1,
-        y: 0, 
-        w: 2, 
-        h: 1, 
-        minW: 2, 
-        noResize: true, 
-        content: '<div class="title-h4"><h4>FARMER UNION HARD TRUCK APOCALIPSE</h4></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        noResize: true, 
-        content: '<div class="content-sp"><span>Farmer Union Inc.</span><span>Rua: Carvalho Leal</span><span>São Paulo - SP</span></div>'
-    }
-]
-
 const body = [
     {
         x: 0, 
         y: 0, 
-        w: 1, 
-        h: 2,
+        w: 2, 
+        h: 3,
         // noResize: true, 
         content: '<div class="elem-img"><img src="assets/logo.png" alt="" /></div>'
     },
     {
-        x: 1,
-        y: 0, 
-        w: 3, 
+        x: 2,
+        y: 1, 
+        w: 6, 
         h: 1, 
-        minW: 3, 
-        noResize: true, 
+        // minW: 3, 
+        // noResize: true, 
         content: '<div class="title-h4"><h4>FARMER UNION HARD TRUCK APOCALIPSE</h4></div>'
     },
     {
-        x: 8, 
-        y: 0,
-        w: 1, 
+        x: 8,
+        y: 1,
+        w: 2, 
         h: 1,
+    placeholderText: "teste",
+
         // noMove: true, 
         // noResize: true, 
         // locked: true, +
         content: '<div class="content-sp"><span>Item 1</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 2</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 3</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 4</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 5</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 6</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 7</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 8</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 9</span></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        // noMove: true, 
-        noResize: true, 
-        // locked: true, +
-        content: '<div class="content-sp"><span>Item 10</span></div>'
     }
 ]
 
-const footer = [
-    {
-        x: 0, 
-        y: 0, 
-        w: 1, 
-        h: 1,
-        noResize: true, 
-        content: '<div class="elem-img"><img src="assets/logo.png" alt="" /></div>'
-    },
-    {
-        x: 1,
-        y: 0, 
-        w: 2, 
-        h: 1, 
-        minW: 2, 
-        noResize: true, 
-        content: '<div class="title-h4"><h4>FARMER UNION HARD TRUCK APOCALIPSE</h4></div>'
-    },
-    {
-        x: 8, 
-        y: 0,
-        w: 1, 
-        h: 1,
-        noResize: true, 
-        content: '<div class="content-sp"><span>24/07/2023</span></div>'
-    }
-]
+const options = {
+    column: 10,
+    row: 26,
+    cellHeight: 40,
+    disableOneColumnMode: true,
+    acceptWidgets: true,
+    float: true,
+    margin: 2,
+    removable: '#trash',
+    class: "teste-eliaquin"
+    // acceptWidgets: function(el) { 
+    //     console.log(el)
+    //     return true
+    // }
+}
 
-const opt = [
-    {
-        column: 4,
-        row: 1,
-        cellHeight: 120,
-        disableOneColumnMode: true,
-        removable: '#trash',
-        float: false,
-    },
-    {
-        column: 5,
-        row: 10,
-        cellHeight: 80,
-        disableOneColumnMode: true,
-        acceptWidgets: true,
-        float: false,
-        removable: '#trash',
-    }
-]
+const gs = GridStack.init(options)
+gs.load(body)
 
-const page = document.querySelector(".page #body-grid")
-const gs = new GridStackBuilder(opt)
+GridStack.setupDragIn('.tools .grid-stack-item', { appendTo: 'body', helper: 'clone' })
 
-gs.createElement(header, "#header-grid", 0)
-gs.createElement(footer, "#footer-grid", 0)
-gs.createElement(body, "#body-grid", 1)
+//event listener
+// gs.on("enable", (event, el) => {
+//     console.log(el)
+// })
 
-GridStack.setupDragIn(".newImage", { appendTo: page, helper: 'clone' })
+
+//conta os elementos na tela
+// extend gridstack with our own custom method
+// GridStack.prototype.printCount = function() {
+//     console.log('grid has ' + this.engine.nodes.length + ' items')
+// };
+// let grid = GridStack.init()
+//   // you can now call
+// grid.printCount()

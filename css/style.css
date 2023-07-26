@@ -7,6 +7,17 @@
     font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar-track {
+    background-color: #d6d6d6d7;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #a1a1a1;
+    border-radius: 3px;
+}
+
 body {
     background: #333;
 }
@@ -23,12 +34,32 @@ body {
     width: 100px;
     height: 100%;
     padding: 20px 10px;
+    border-right: 1px solid #ccc;
+}
+
+.tools .grid-stack-item {
+    border-radius: 3px;
+    transition: .2s;
+}
+
+.tools .grid-stack-item:hover {
+    background: #ccccccb4;
 }
 
 .tools ul {
     list-style: none;
     position: relative;
     height: 100%;
+}
+
+.tools ul li svg {
+    display: none;
+    visibility: hidden;
+}
+
+.tools ul li svg:active {
+    display: none;
+    visibility: hidden;
 }
 
 .tools ul li {
@@ -80,60 +111,36 @@ body {
 
 .doc .page {
     display: grid;
-    grid-template-rows: 100px 1fr 120px;
     background: #fff;
+    border: 1px solid #ccc;
     padding: 20px;
-    height: 1124px;
-    width: 784px;
+    height: 1124;
+    min-width: 840px;
+    max-width: 840px;
     margin: 0 auto;
-    /* height: 100%; */
     -webkit-box-shadow: 9px 3px 28px -12px rgba(190, 191, 206, 1);
     -moz-box-shadow: 9px 3px 28px -12px rgba(190, 191, 206, 1);
     box-shadow: 9px 3px 28px -12px rgba(190, 191, 206, 1);
 }
 
-.doc .page header {
-    border-bottom: 1px solid #ccc;
+.doc .page .grid-stack-item i {
+    display: none;
 }
 
-.page header .address ul {
-    list-style: none;
+.doc .page .grid-stack-item .grid-stack-item-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.page header .address ul li {
-    font-size: .9rem;
-    padding-left: 10px;
+.doc .page .grid-stack-item svg {
+    width: 60%;
+    height: 60%;
 }
 
-.page header .logo {
-    margin: 0 auto;
-    width: 80px;
-    height: 80px;
-}
-
-.page header .logo h1 {
-    text-align: center;
-}
-
-.page header .logo img {
+.doc .page .grid-stack-item img {
     width: 100%;
-}
-
-.page header span {
-    text-align: center;
-}
-
-.page header h3 {
-    text-align: center;
-}
-
-.page main {
-    margin-top: 20px;
-    /* background: rgb(235, 221, 221); */
-}
-
-.page footer {
-    border-top: 1px solid #ccc;
+    height: 100%;
 }
 
 .properties {
