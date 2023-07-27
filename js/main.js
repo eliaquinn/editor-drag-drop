@@ -67,60 +67,62 @@ GridStack.setupDragIn('.tools .grid-stack-item', { appendTo: 'body', helper: 'cl
 //   // you can now call
 // grid.printCount()
 
-pdfMake.fonts = {
-   Roboto: {
-     normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-     bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-     italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-     bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
-   }
-}
-
-// var docDefinitions = {
-// 	content: [
-// 		{
-// 		    style: 'tableExample',
-//     		table: {
-// 				widths: [100, '*'],
-// 				body: [
-// 					[
-// 					    {
-// 					        image: 'https://static.wixstatic.com/media/0784b1_476fd2c5d17f46db826984d3947acdad~mv2.jpg/v1/fill/w_270,h_262,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/bo_wix_com_user-manager_users_byGuid_378b07fd-d52a-49e9-a802-db6d5b2d70c7.jpg',
-//             			    width: 80,
-//             			    height: 80
-// 					    },
-// 					    {
-//                             text: 'FARMER UNION HARD TRUCK APOCALIPSE',
-//                             style: 'header'
-//                         }
-// 					]
-// 				]
-// 			},
-// 			layout: 'noBorders'
-// 		}
-// 	],
-// 	styles: {
-// 	    tableExample: {
-// 			margin: [0, 0, 0, 0]
-// 		},
-//         header: {
-//             fontSize: 18,
-//             bold: true,
-//             alignment: 'center',
-//             margin: [ 5, 2, 10, 20 ]
-//         }
-// 	}
+// pdfMake.fonts = {
+//    Roboto: {
+//      normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+//      bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+//      italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+//      bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+//    }
 // }
 
-var docConverted = htmlToPdfmake("<h1>AQUI VAI O HTML</h1>")
+pdfMake.fonts = {
+    Bahnschrift: {
+      normal: 'bahnschrift.ttf'
+    }
+  }
 
-console.log(docConverted)
+// {
+//     image: 'https://static.wixstatic.com/media/0784b1_476fd2c5d17f46db826984d3947acdad~mv2.jpg/v1/fill/w_270,h_262,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/bo_wix_com_user-manager_users_byGuid_378b07fd-d52a-49e9-a802-db6d5b2d70c7.jpg',
+//     width: 80,
+//     height: 80
+// },
 
-var dd = {
-    content: docConverted
+var docDefinitions = {
+	content: [
+		{
+		    style: 'tableExample',
+    		table: {
+				widths: [100, '*'],
+				body: [
+					[
+					    
+					    {
+                            text: 'FARMER UNION HARD TRUCK APOCALIPSE',
+                            style: 'header'
+                        }
+					]
+				]
+			},
+			layout: 'noBorders'
+		}
+	],
+    defaultStyle: {
+        font: 'Bahnschrift'
+    },
+	styles: {
+	    tableExample: {
+			margin: [0, 0, 0, 0]
+		},
+        header: {
+            fontSize: 18,
+            alignment: 'center',
+            margin: [ 5, 2, 10, 20 ]
+        }
+	}
 }
 
 btnSave.addEventListener("click", () => {
     // pdfMake.createPdf(docDefinitions).download('document.pdf');
-    pdfMake.createPdf(dd).download('document.pdf')
+    pdfMake.createPdf(docDefinitions).download('document.pdf')
 })
