@@ -77,8 +77,10 @@ GridStack.setupDragIn('.tools .grid-stack-item', { appendTo: 'body', helper: 'cl
 // }
 
 pdfMake.fonts = {
-    Bahnschrift: {
-      normal: 'bahnschrift.ttf'
+    Poppins: {
+        normal: "Regular.ttf",
+        bold: 'SemiBold.ttf',
+        italics: 'Italic.ttf'
     }
   }
 
@@ -96,7 +98,11 @@ var docDefinitions = {
 				widths: [100, '*'],
 				body: [
 					[
-					    
+					    {
+                            image: 'logo.png',
+                            width: 80,
+                            height: 80
+                        },
 					    {
                             text: 'FARMER UNION HARD TRUCK APOCALIPSE',
                             style: 'header'
@@ -108,7 +114,7 @@ var docDefinitions = {
 		}
 	],
     defaultStyle: {
-        font: 'Bahnschrift'
+        font: 'Poppins'
     },
 	styles: {
 	    tableExample: {
