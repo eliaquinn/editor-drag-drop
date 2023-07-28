@@ -40,17 +40,31 @@ const options = {
     float: true,
     margin: 2,
     removable: '#trash',
-    class: "teste-eliaquin"
+    class: "teste-eliaquin",
+    handle: 'adicional'
     // acceptWidgets: function(el) { 
     //     console.log(el)
     //     return true
     // }
 }
 
+const docEngine = new DocumentEngine()
+
+//insert custom functions into prototype GridStack
+GridStack.prototype.printCount = function() {
+    this.el.addEventListener('click', (e) => {
+        // this.engine.nodes.filter()
+        console.log(this)
+    })
+    // console.log('O documento possui ' + this.engine.nodes.length + ' elemento(s)')
+}
+
 const gs = GridStack.init(options)
 gs.load(body)
 
 GridStack.setupDragIn('.tools .grid-stack-item', { appendTo: 'body', helper: 'clone' })
+
+gs.printCount()
 
 //event listener
 // gs.on("enable", (event, el) => {
@@ -67,15 +81,6 @@ GridStack.setupDragIn('.tools .grid-stack-item', { appendTo: 'body', helper: 'cl
 //   // you can now call
 // grid.printCount()
 
-// pdfMake.fonts = {
-//    Roboto: {
-//      normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-//      bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-//      italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-//      bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
-//    }
-// }
-
 pdfMake.fonts = {
     Poppins: {
         normal: "Regular.ttf",
@@ -83,12 +88,6 @@ pdfMake.fonts = {
         italics: 'Italic.ttf'
     }
   }
-
-// {
-//     image: 'https://static.wixstatic.com/media/0784b1_476fd2c5d17f46db826984d3947acdad~mv2.jpg/v1/fill/w_270,h_262,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/bo_wix_com_user-manager_users_byGuid_378b07fd-d52a-49e9-a802-db6d5b2d70c7.jpg',
-//     width: 80,
-//     height: 80
-// },
 
 var docDefinitions = {
 	content: [
