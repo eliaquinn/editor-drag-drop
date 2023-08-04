@@ -54,7 +54,7 @@ const docEngine = new DocumentEngine()
 GridStack.prototype.printCount = function() {
     this.el.addEventListener('click', (e) => {
         // this.engine.nodes.filter()
-        console.log(this)
+        console.log(this.opts)
     })
     // console.log('O documento possui ' + this.engine.nodes.length + ' elemento(s)')
 }
@@ -126,6 +126,50 @@ var docDefinitions = {
         }
 	}
 }
+
+
+// var dd = {
+// 	content: [
+// 		{
+// 			style: 'tableExample',
+// 			table: {
+// 				widths: [45, 45, 45, 45, 45, 45, 45, 45, 45, 45],
+// 				body: [
+// 					//['header 1', 'header 2', 'header 3', 'header 4', 'header 5', 'header 6', 'header 7', 'header 8', 'header 9', 'header 10'],
+// 					[
+// 					    {text: 'data1', color: 'gray'}, 
+// 					    {text: 'data2', color: 'gray'}, 
+// 					    {text: 'data3', color: 'gray'},
+// 					    {text: 'data4', color: 'gray'},
+// 					    {text: 'data5', color: 'gray'},
+// 					    {text: 'data6', color: 'gray'}, 
+// 					    {text: 'data7', color: 'gray'},
+// 					    {text: 'data8', color: 'gray'},
+// 					    {text: 'data9', color: 'gray'},
+// 					    {text: 'data10', color: 'gray'},
+// 					],
+// 					[
+// 					    {text: 'data1', color: 'gray'}, 
+// 					    {text: 'data2', color: 'gray'}, 
+// 					    {text: 'data3', color: 'gray'},
+// 					    {text: 'data4', color: 'gray'},
+// 					    {text: 'data5', color: 'gray'},
+// 					    {text: 'data6', color: 'gray'}, 
+// 					    {text: 'data7', color: 'gray'},
+// 					    {text: 'data8', color: 'gray'},
+// 					    {text: 'data9', color: 'gray'},
+// 					    {text: 'data10', color: 'gray'},
+// 					],
+// 				]
+// 			}
+// 		}
+// 	],
+// 	styles: {
+// 		tableExample: {
+// 			margin: [-12, -12, -12,-12]
+// 		}
+// 	},
+// }
 
 btnSave.addEventListener("click", () => {
     // pdfMake.createPdf(docDefinitions).download('document.pdf');
